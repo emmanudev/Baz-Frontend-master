@@ -1,0 +1,134 @@
+<div class="container">
+    <mat-list>
+        <mat-list-item class="mat-list-item left">QA</mat-list-item>
+        <mat-accordion>
+
+            <mat-expansion-panel (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Generador de Extractos
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Da clic para {{panelOpenState1 ? 'Cerrar' : 'Abrir'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <form [formGroup]="formExtractos" (ngSubmit)="ejecutarQA()">
+                    <mat-form-field>
+                        <mat-label>Seleccione la fecha deseada</mat-label>
+                        <input matInput [matDatepicker]="pickerQA" format="mm/dd/yyyy" formControlName="fecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerQA"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerQA></mat-datepicker>
+                    </mat-form-field>
+                    <div>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="formExtractos.invalid">Generar</button>
+                    </div>
+                </form>
+                <br>
+                <mat-spinner *ngIf="loadingqa"></mat-spinner>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Generador de Extractos en Linea
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Da clic para {{panelOpenState2 ? 'Cerrar' : 'Abrir'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <form [formGroup]="formExtractosEnLinea" (ngSubmit)="ejecutarExtEnLinea()">
+                    <mat-form-field>
+                        <mat-label>Seleccione la fecha deseada</mat-label>
+                        <input matInput [matDatepicker]="pickerCM" format="mm/dd/yyyy" formControlName="fecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerCM"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerCM></mat-datepicker>
+                    </mat-form-field>
+                    <div>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="formExtractosEnLinea.invalid">Generar</button>
+                    </div>
+                </form>
+                <br>
+                <mat-spinner *ngIf="loadingqa"></mat-spinner>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panelOpenState3 = true" (closed)="panelOpenState3 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Envio de correos Manual
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Da clic para {{panelOpenState3 ? 'Cerrar' : 'Abrir'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <form [formGroup]="formExtractosCorreo" (ngSubmit)="ejecutarCorreoQA()">
+                    <mat-form-field>
+                        <mat-label>Seleccione la fecha deseada</mat-label>
+                        <input matInput [matDatepicker]="pickerEL" format="mm/dd/yyyy" formControlName="fecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerEL"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerEL></mat-datepicker>
+                    </mat-form-field>
+                    <div>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="formExtractosCorreo.invalid">Generar</button>
+                    </div>
+                </form>
+                <br>
+                <mat-spinner *ngIf="loadingqa"></mat-spinner>
+            </mat-expansion-panel>
+           
+        </mat-accordion>
+        <mat-divider></mat-divider>
+        <mat-list-item>Perf QA</mat-list-item>
+        <mat-accordion>
+
+            <mat-expansion-panel (opened)="panePerflOpenState1 = true" (closed)="panePerflOpenState1 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Generador de Extractos
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Da clic para {{panePerflOpenState1 ? 'Cerrar' : 'Abrir'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <form [formGroup]="formExtractosPerf" (ngSubmit)="ejecutarPerfQA()">
+                    <mat-form-field>
+                        <mat-label>Seleccione la fecha deseada</mat-label>
+                        <input matInput [matDatepicker]="pickerperfQA" format="mm/dd/yyyy" formControlName="fecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerperfQA"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerperfQA></mat-datepicker>
+                    </mat-form-field>
+                    <div>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="formExtractosPerf.invalid">Generar</button>
+                    </div>
+                </form>
+                <br>
+                <mat-spinner *ngIf="loadingqa"></mat-spinner>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel (opened)="panePerflOpenState3 = true" (closed)="panePerflOpenState3 = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Envio de correos Manual
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Da clic para {{panePerflOpenState3 ? 'Cerrar' : 'Abrir'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <form [formGroup]="formExtractosCorreoPerf" (ngSubmit)="ejecutarCorreoPerf()">
+                    <mat-form-field>
+                        <mat-label>Seleccione la fecha deseada</mat-label>
+                        <input matInput [matDatepicker]="pickerPerfEL" format="mm/dd/yyyy" formControlName="fecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerPerfEL"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerPerfEL></mat-datepicker>
+                    </mat-form-field>
+                    <div>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="formExtractosCorreoPerf.invalid">Generar</button>
+                    </div>
+                </form>
+                <br>
+                <mat-spinner *ngIf="loadingqa"></mat-spinner>
+            </mat-expansion-panel>
+            
+        </mat-accordion>
+        <mat-divider></mat-divider>
+    </mat-list>
+</div>

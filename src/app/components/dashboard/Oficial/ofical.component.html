@@ -1,0 +1,55 @@
+<div class="example-container">
+  <div class="cen">
+      <mat-toolbar color="primary">
+          <h2>Ingrese Datos Del Sistema</h2>
+      </mat-toolbar>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre del Oficial</mat-label>
+          <input matInput="matInput" type='text'></mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Dependencia</mat-label>
+          <mat-select>
+              <mat-option value="option1">Abuso Sexual</mat-option>
+              <mat-option value="option2">Portacion de Arma</mat-option>
+              <mat-option value="option3">Drograse</mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Institucion o Mercio</mat-label>
+        <mat-select>
+            <mat-option value="option1">Abuso Sexual</mat-option>
+            <mat-option value="option2">Portacion de Arma</mat-option>
+            <mat-option value="option3">Drograse</mat-option>
+        </mat-select>
+    </mat-form-field>
+                
+
+                  </div>
+                  <br>
+                      <mat-form-field appearance="fill">
+                          <mat-label>Numero de Folio</mat-label>
+                          <input matInput="matInput" type='text'></mat-form-field>
+                          <mat-form-field appearance="fill">
+                              <mat-label>Referencia</mat-label>
+                              <input matInput="matInput" type='text'></mat-form-field>
+                              <mat-form-field appearance="fill">
+                                  <mat-label>Folio RND</mat-label>
+                                  <input matInput="matInput" type='text'></mat-form-field>
+                                  <br>
+
+                                      <div>
+                                          <mat-form-field appearance="fill">
+                                              <mat-label>Fecha de Captura</mat-label>
+                                              <input matInput="matInput" type='text'></mat-form-field>
+
+                                          </div>
+                                      </div>
+
+                                      <mat-spinner *ngIf="loading"></mat-spinner>
+
+                                  </div>
+

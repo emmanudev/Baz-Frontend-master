@@ -1,0 +1,46 @@
+[
+  {
+    "nombre": "inicio",
+    "redirect": "/dash/inicio"
+  },
+  {
+    "nombre": "Expediente",
+    "redirect": "/dash/expediente"
+  },
+  {
+    "nombre": "Datos del Delito",
+    "redirect": "/dash/datos"
+  },
+  {
+    "nombre": "Oficial",
+    "redirect": "/dash/oficial"
+  },
+  {
+    "nombre": "Delito",
+    "redirect": "/dash/delito"
+  },
+  {
+    "nombre": "Detenido",
+    "redirect": "/dash/detenido"
+  },
+  {
+    "nombre": "Victima",
+    "redirect": "/dash/victima"
+  },
+  {
+    "nombre": "Vehiculo",
+    "redirect": "/dash/vehiculo"
+  },
+  {
+    "nombre": "Objetos Asegurados",
+    "redirect": "/dash/Objetos"
+  },
+  {
+    "nombre": "Graficas",
+    "redirect": "/dash/grafica"
+  },
+  {
+    "nombre": "Reportes",
+    "redirect": "/dash/reportes"
+  }
+]

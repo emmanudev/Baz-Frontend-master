@@ -1,0 +1,48 @@
+<div class="example-container">
+    <div class="cen">
+        <mat-toolbar color="primary">
+            <h2>Ingrese Datos De la Victima</h2>
+        </mat-toolbar>
+
+        <div>
+            <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput="matInput" type='text'></mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Apellido Paterno</mat-label>
+                        <input matInput="matInput" type='text'></mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Apellido Materno</mat-label>
+                            <input matInput="matInput" type='text'></mat-form-field>
+
+
+                        </div>
+                        <br>
+                            <div>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Denunciante o Victima</mat-label>
+                                    <input matInput="matInput" type='text'></mat-form-field>
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Edad</mat-label>
+                                        <input matInput="matInput" type='text'></mat-form-field>
+                                        <mat-form-field appearance="fill">
+                                            <mat-label>Sexo</mat-label>
+                                            <input matInput="matInput" type='text'></mat-form-field>
+                                        </div>
+                                        <br>
+                                            <div>
+                                                <mat-form-field appearance="fill">
+                                                    <mat-label>Fecha de Nacimiento</mat-label>
+                                                    <input matInput="matInput" type='text'></mat-form-field>
+                                                    <mat-form-field appearance="fill">
+                                                        <mat-label>Nacionalidad</mat-label>
+                                                        <input matInput="matInput" type='text'></mat-form-field>
+
+                                                    </div>
+                                                </div>
+
+                                                <mat-spinner *ngIf="loading"></mat-spinner>
+
+                                            </div>

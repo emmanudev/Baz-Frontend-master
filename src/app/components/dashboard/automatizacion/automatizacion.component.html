@@ -1,0 +1,35 @@
+<div class="container">
+    <mat-list>
+        <mat-list-item class="mat-list-item left">Automatización de linea de crédito</mat-list-item>
+        <mat-accordion>
+
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Creacion de Limites
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Da clic para {{panelOpenState ? 'Cerrar' : 'Abrir'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+
+                <form [formGroup]="FormUploadFile" (ngSubmit)="createLimits()">
+                    <mat-form-field>
+                        <ngx-mat-file-input placeholder="Seleccione Archivo" formControlName="file">
+                           <mat-icon ngxMatFileInputIcon>upload</mat-icon>
+                        </ngx-mat-file-input>
+                     </mat-form-field>
+                     <br>
+                     <div>
+                        <button type="submit" mat-raised-button color="primary" [disabled]="FormUploadFile.invalid">Generar Limites</button>
+                    </div>
+                </form>
+                <br>
+                <mat-spinner *ngIf="loading"></mat-spinner>
+
+            </mat-expansion-panel>
+
+        </mat-accordion>
+        <mat-divider></mat-divider>
+    </mat-list>
+</div>

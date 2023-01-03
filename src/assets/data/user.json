@@ -1,0 +1,9 @@
+[
+    {
+        "id_user" : 1,
+        "user" : "emmanuel",
+        "pass" : "passroot",
+        "full_name" : "Emmanuel Bustillos Amaya",
+        "role" : "ADMIN"
+    }
+]

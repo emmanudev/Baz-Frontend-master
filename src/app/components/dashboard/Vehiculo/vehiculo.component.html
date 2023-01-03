@@ -1,0 +1,36 @@
+<div class="example-container">
+    <div class="cen">
+        <mat-toolbar color="primary">
+            <h2>Ingrese Datos Del Vehiculo
+            </h2>
+        </mat-toolbar>
+
+        <div>
+            <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Numero de la Placa</mat-label>
+                    <input matInput="matInput" type='text'></mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Marca</mat-label>
+                        <input matInput="matInput" type='text'></mat-form-field>
+                        <mat-form-field appearance="fill">
+                            <mat-label>SubMarca</mat-label>
+                            <input matInput="matInput" type='text'></mat-form-field>
+
+
+                        </div>
+                        <br>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Año</mat-label>
+                                <input matInput="matInput" type='text'></mat-form-field>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Color</mat-label>
+                                    <input matInput="matInput" type='text'></mat-form-field>
+
+
+                                </div>
+
+                                <mat-spinner *ngIf="loading"></mat-spinner>
+
+                            </div>

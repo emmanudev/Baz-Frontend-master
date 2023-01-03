@@ -1,0 +1,125 @@
+<div class="container">
+  <mat-list>
+    <mat-list-item class="mat-list-item left">Expedientes</mat-list-item>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Crear
+          </mat-panel-title>
+          <mat-panel-description>
+            Da clic para
+            {{panelOpenState ? 'Cerrar' : 'Abrir'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-toolbar color="primary">
+          <h2>Ingrese Datos Del Sistema</h2>
+        </mat-toolbar>
+
+        <form [formGroup]="formExpediente" (ngSubmit)="createExp()" enctype="multipart/form-data">
+          <mat-form-field>
+            <ngx-mat-file-input placeholder="Seleccione Archivo" formControlName="file">
+               <mat-icon ngxMatFileInputIcon>upload</mat-icon>
+            </ngx-mat-file-input>
+         </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Fuente</mat-label>
+            <input matInput="matInput" type='text' formControlName="fuente">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Nic</mat-label>
+            <input matInput="matInput" type='text' formControlName="nic">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Nuc</mat-label>
+            <input matInput="matInput" type='text' formControlName="nuc">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Numero de Folio</mat-label>
+            <input matInput="matInput" type='text' formControlName="no_folio">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Referencia</mat-label>
+            <input matInput="matInput" type='text' formControlName="referencia">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Folio RND</mat-label>
+            <input matInput="matInput" type='text' formControlName="folio">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Seleccione la fecha deseada</mat-label>
+            <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="fecha">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <button type="submit" class="ancho" mat-raised-button="mat-raised-button" color="primary">Enviar</button>
+        </form>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Crear
+          </mat-panel-title>
+          <mat-panel-description>
+            Da clic para
+            {{panelOpenState2 ? 'Cerrar' : 'Abrir'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-toolbar color="primary">
+          <h2>Ingrese Datos Del Sistema</h2>
+        </mat-toolbar>
+        <div class="row container">
+          <form [formGroup]="formExpediente" (ngSubmit)="createExp()">
+            <div class="col-xs-12 col-sm-4 text-center justify-content">
+              <mat-form-field appearance="fill">
+                <mat-label>Fuente</mat-label>
+                <input matInput="matInput" type='text' formControlName="fuente">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Nic</mat-label>
+                <input matInput="matInput" type='text' formControlName="nic">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Nuc</mat-label>
+                <input matInput="matInput" type='text' formControlName="nuc">
+              </mat-form-field>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 text-center">
+              <mat-form-field appearance="fill">
+                <mat-label>Numero de Folio</mat-label>
+                <input matInput="matInput" type='text' formControlName="no_folio">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Referencia</mat-label>
+                <input matInput="matInput" type='text' formControlName="referencia">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Folio RND</mat-label>
+                <input matInput="matInput" type='text' formControlName="folio">
+              </mat-form-field>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 text-center">
+              <mat-form-field>
+                <mat-label>Seleccione la fecha deseada</mat-label>
+                <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="fecha">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <button type="submit" class="ancho" mat-raised-button="mat-raised-button" color="primary">Enviar</button>
+
+            </div>
+          </form>
+
+        </div>
+
+
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>

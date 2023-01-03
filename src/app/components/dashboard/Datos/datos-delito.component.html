@@ -1,0 +1,109 @@
+<div class="example-container">
+  <div class="cen">
+    <mat-toolbar color="primary">
+      <h2>Ingrese Datos Del Delio</h2>
+    </mat-toolbar>
+    <br>
+    <form [formGroup]="formDatos" (ngSubmit)="createDatos()">
+      <div>
+        <!--select-->
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese la Colonia</mat-label>
+          <mat-select  formControlName="Colonia">
+            <mat-option value="Abuso Sexual">Abuso Sexual</mat-option>
+            <mat-option value="Portacion de Arma">Portacion de Arma</mat-option>
+            <mat-option value="Drograse">Drograse</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese la Zona</mat-label>
+          <mat-select formControlName="Zona">
+            <mat-option value="Abuso">Abuso Sexual</mat-option>
+            <mat-option value="Arma">Arma Prohibida</mat-option>
+            <mat-option value="Dorgarse">Dorgarse</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese la Region</mat-label>
+          <mat-select  formControlName="Region">
+            <mat-option value="s/v">s/v</mat-option>
+            <mat-option value="c/v">c/v</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <!--select-->
+      <br>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese la Calle</mat-label>
+          <mat-select formControlName="Calle1">
+            <mat-option value="option1">Enero</mat-option>
+            <mat-option value="option2">Febrero</mat-option>
+            <mat-option value="option1">Marzo</mat-option>
+            <mat-option value="option2">Abril</mat-option>
+            <mat-option value="option1">Mayo</mat-option>
+            <mat-option value="option2">Junio</mat-option>
+            <mat-option value="option1">Julio</mat-option>
+            <mat-option value="option2">Agosto</mat-option>
+            <mat-option value="option1">Septiempbre</mat-option>
+            <mat-option value="option2">Octubre</mat-option>
+            <mat-option value="option1">Noviembre</mat-option>
+            <mat-option value="option2">Diciembre</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese la segunda calle o referencia</mat-label>
+          <mat-select formControlName="Calle2">
+            <mat-option value="option1">Lunes</mat-option>
+            <mat-option value="option2">Martes</mat-option>
+            <mat-option value="option3">Miercoles</mat-option>
+            <mat-option value="option2">Jueves</mat-option>
+            <mat-option value="option3">Viernes</mat-option>
+            <mat-option value="option2">Sabado</mat-option>
+            <mat-option value="option3">Domingo</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese el numero de la Calle</mat-label>
+          <mat-select formControlName="Numero">
+            <mat-option value="option1">01</mat-option>
+            <mat-option value="option2">02</mat-option>
+            <mat-option value="option3">03</mat-option>
+            <mat-option value="option2">04</mat-option>
+            <mat-option value="option3">05</mat-option>
+            <mat-option value="option2">06</mat-option>
+            <mat-option value="option3">07</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+      </div>
+      <br>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Adscripcion</mat-label>
+          <input matInput="matInput" type='text' formControlName="Adscripcion">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Impacto</mat-label>
+          <input matInput="matInput" type='text' formControlName="Impacto">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+          <mat-label>Y</mat-label>
+          <input matInput="matInput" type='text' formControlName="Y"></mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>X</mat-label>
+          <input matInput="matInput" type='text' formControlName="X">
+        </mat-form-field>
+
+
+      </div>
+      <button type="submit" class="ancho" mat-raised-button="mat-raised-button" color="primary">Enviar</button>
+
+    </form>

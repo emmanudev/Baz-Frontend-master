@@ -1,0 +1,32 @@
+export interface AdLimitRq {
+    id_api: number;
+    operationType: string;
+    collateralType: string;
+    restriction: string;
+    investmentDestination: string;
+    limitSuffix: string;
+    contIntMargin: string;
+    minTenor: string;
+    considerAutomaticFreeze: string;
+    solId: string;
+    limitThresholdPercent: string;
+    netLimitApplicableFlg: string;
+    committedFlg: string;
+    custId: string;
+    drwngPowerInd: string;
+    limitDesc: string;
+    limitEffDate: string;
+    limitExpiryDatel: string;
+    limitReviewDate: string;
+    limitSanctDate: string;
+    limitSigningDate: string;
+    limitType: string;
+    sanctLimit: string;
+    singleTranFlg: string;
+    masterCode: string;
+    condPrecedentFlg: string;
+    availEndDate: string;
+    feeSetupInfo: string;
+    operativeAccountId: string;
+    baselDtls: string;
+}
