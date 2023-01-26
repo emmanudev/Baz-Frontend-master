@@ -11,7 +11,7 @@ import { ExpedienteService } from 'src/app/services/expediente/expediente.servic
 export class ExpedienteComponent implements OnInit {
 
   formExpediente: FormGroup | any;
-  panelOpenState = false;
+  panelOpenState = true;
   panelOpenState2 = false;
 
   loadingqa: boolean = false;
@@ -39,7 +39,7 @@ export class ExpedienteComponent implements OnInit {
     console.log("Datos del la data");
     console.log(expeData);
     this.expedienteService.create(expeData).subscribe(res => {
-
+      console.log();
     });
   }
 

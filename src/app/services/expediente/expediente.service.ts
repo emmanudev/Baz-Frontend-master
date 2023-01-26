@@ -33,7 +33,7 @@ export class ExpedienteService {
   public create(expedienteData : FormGroup) : Observable<Expediente | any>{
     const data = expedienteData.value
     console.log("Contenido");
-    let dataExp = new Expediente(null,data.fuente,data.nic,data.nuc,data.no_folio,data.referencia,data.folio,data.fechacap.toString());
+    let dataExp = new Expediente(null,data.fuente,data.nic,data.nuc,data.no_folio,data.referencia,data.folio,data.fechacap.toString(),data.file);
     console.log(dataExp);
     const response = this.http.post(`http://localhost:8080/expediente/add`, dataExp).pipe(
       catchError(this.handleError)

@@ -48,7 +48,7 @@
           </mat-form-field>
           <mat-form-field>
             <mat-label>Seleccione la fecha deseada</mat-label>
-            <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="fecha">
+            <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="fechacap">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
@@ -106,9 +106,9 @@
             <div class="col-xs-6 col-sm-4 text-center">
               <mat-form-field>
                 <mat-label>Seleccione la fecha deseada</mat-label>
-                <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="fecha">
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <input matInput [matDatepicker]="picker2" format="mm/dd/yyyy" formControlName="fechacap">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
               </mat-form-field>
               <button type="submit" class="ancho" mat-raised-button="mat-raised-button" color="primary">Enviar</button>
 
