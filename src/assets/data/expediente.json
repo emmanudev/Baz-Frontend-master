@@ -1,0 +1,111 @@
+    [
+        {
+            "Id_exp": "1",
+            "fuente": "Alerta 06",
+            "nic": "1354951871",
+            "nuc": "3546843516",
+            "no_folio": "3168131681",
+            "referencia": "3516846516",
+            "folio": "35168165",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "2",
+            "fuente": "IPH",
+            "nic": "6846581",
+            "nuc": "5341658435",
+            "no_folio": "68468541",
+            "referencia": "3541684",
+            "folio": "351381",
+            "fechacap": "1998-02-12 03:00:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "3",
+            "fuente": "Con Detenido",
+            "nic": "luhiuj",
+            "nuc": "liniui",
+            "no_folio": "kubljyb",
+            "referencia": "bjlyb",
+            "folio": "jbilyhb",
+            "fechacap": "0962-02-06 06:12:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "4",
+            "fuente": "IPH",
+            "nic": "1898163",
+            "nuc": "351681",
+            "no_folio": ".5135183",
+            "referencia": "5135135",
+            "folio": ".53513",
+            "fechacap": "2022-02-12 16:00:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "5",
+            "fuente": "Amesas",
+            "nic": "2458415846",
+            "nuc": "684684",
+            "no_folio": "684684",
+            "referencia": "3846846",
+            "folio": "685468",
+            "fechacap": "2022-05-12 14:00:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "6",
+            "fuente": "Con Detenido",
+            "nic": "4846815sr",
+            "nuc": "135487jug",
+            "no_folio": "457896",
+            "referencia": "1245",
+            "folio": "3487",
+            "fechacap": "2017-05-20 04:07:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "7",
+            "fuente": "Con Detenido",
+            "nic": "jygu",
+            "nuc": "kbujyb",
+            "no_folio": "jbyuly",
+            "referencia": "jhbliy",
+            "folio": "jhbuly",
+            "fechacap": "2022-12-22 13:45:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "8",
+            "fuente": "",
+            "nic": "",
+            "nuc": "",
+            "no_folio": "",
+            "referencia": "",
+            "folio": "",
+            "fechacap": "2023-01-03 07:33:42",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "9",
+            "fuente": "4",
+            "nic": "4",
+            "nuc": "4",
+            "no_folio": "4",
+            "referencia": "4",
+            "folio": "4",
+            "fechacap": "0000-00-00 00:00:00",
+            "foto": "0x"
+        },
+        {
+            "Id_exp": "10",
+            "fuente": "wq",
+            "nic": "wq",
+            "nuc": "wq",
+            "no_folio": "wq",
+            "referencia": "wq",
+            "folio": "wq",
+            "fechacap": "0000-00-00 00:00:00",
+            "foto": "0x"
+        }
+    ]

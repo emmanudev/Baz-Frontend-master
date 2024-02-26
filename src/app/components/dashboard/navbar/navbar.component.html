@@ -1,8 +1,9 @@
 <mat-toolbar>
   <button routerLink="/dashboard" mat-icon-button class="example-icon favorite-icon">
-    <img src="./assets/img/naucalpan.png" width="100">
+    <img src="" width="90">
   </button>
-  <img src="./assets/img/naucalpan.png" width="90"> &nbsp; &nbsp;
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="https://naucalpan.gob.mx/wp-content/uploads/2022/03/logo.png" width="90"> &nbsp; &nbsp;
   <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button>
   <span class="example-spacer"></span>
   <button routerLink="/logout" mat-icon-button class="example-icon favorite-icon"

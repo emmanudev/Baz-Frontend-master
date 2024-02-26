@@ -1,29 +1,36 @@
 export class Datos {
-  Id_datos?: any
-  Colonia: string
-  Zona: string
-  Region: string
-  Calle1: string
-  Calle2: string
-  Numero: string
-  Adscripcion: string
-  Impacto: string
-  Y: string
-  X: string
+  id_DATOS?: any
+  ZONA: string
+  COLONIA: string
+  CALLE_1: string
+  CALLE_O_REFERENCIA: string
+  MOTIVO_DE_LA_DETENCION: string
+  COORDENADA_Y_LATITUD: string
+  COORDENADA_X_LONGITUD: string
 
-  constructor(Id_datos: any | null, Colonia: string, Zona: string, Region: string, Calle1: string,
-    Calle2: string, Numero: string, Adscripcion: string,Impacto:string, Y: string, X: string) {
-    this.Id_datos = Id_datos
-    this.Colonia = Colonia
-    this.Zona = Zona
-    this.Region = Region
-    this.Calle1 = Calle1
-    this.Calle2 = Calle2
-    this.Numero = Numero
-    this.Adscripcion = Adscripcion
-    this.Impacto = Impacto
-    this.Y = Y
-    this.X = X
+  constructor(id_DATOS: any | null,  ZONA: string, COLONIA: string, CALLE_1: string,
+    CALLE_O_REFERENCIA: string, MOTIVO_DE_LA_DETENCION: string, COORDENADA_Y_LATITUD: string,COORDENADA_X_LONGITUD:string) {
+    this.id_DATOS = id_DATOS
+    this.ZONA = ZONA
+    this.COLONIA = COLONIA
+    this.CALLE_1 = CALLE_1
+    this.CALLE_O_REFERENCIA = CALLE_O_REFERENCIA
+    this.MOTIVO_DE_LA_DETENCION = MOTIVO_DE_LA_DETENCION
+    this.COORDENADA_Y_LATITUD = COORDENADA_Y_LATITUD
+    this.COORDENADA_X_LONGITUD = COORDENADA_X_LONGITUD
 
   }
+}
+
+export interface DatosI {
+  id_DATOS?: any;
+  ZONA: string;
+  FECHA_HORA: string;
+  COLONIA: string;
+  CALLE_1: string;
+  CALLE_O_REFERENCIA: string;
+  MOTIVO_DE_LA_DETENCION: string;
+  COORDENADA_Y_LATITUD: string;
+  COORDENADA_X_LONGITUD: string;
+
 }

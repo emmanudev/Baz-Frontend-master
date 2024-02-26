@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 
 //Modulos
 import { ReactiveFormsModule } from '@angular/forms';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
-//Graficas
-import { NgApexchartsModule } from "ng-apexcharts";
 
+//Graficas
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 //Modulos CDK
 import { CdkAccordionModule } from '@angular/cdk/accordion';
@@ -32,10 +31,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCardModule } from '@angular/material/card';
-import { MatCarouselModule } from 'ng-mat-carousel';
-import { MatSelectModule } from '@angular/material/select';
-
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule} from '@angular/material/select';
+import { MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [],
@@ -59,11 +57,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatTableModule,
     MatPaginatorModule,
     MatCardModule,
-    IvyCarouselModule,
     NgxMatFileInputModule,
-    MatCarouselModule,
-    MatSelectModule,
     NgApexchartsModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatAutocompleteModule,
   ],
   exports : [
     CommonModule,
@@ -85,11 +83,12 @@ import { MatSelectModule } from '@angular/material/select';
     MatTableModule,
     MatPaginatorModule,
     MatCardModule,
-    IvyCarouselModule,
     NgxMatFileInputModule,
-    MatCarouselModule,
-    MatSelectModule,
     NgApexchartsModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+
   ]
 })
 export class SharedModule { }

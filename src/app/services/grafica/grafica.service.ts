@@ -13,4 +13,7 @@ export class GraficaService {
       return this.http.get<any[]>(`http://localhost:8080/delito/list`);
     }
 
+    public getDataGraficaMes(mes : String) : Observable<any> {
+      return this.http.get<any[]>(`http://localhost:8080/delito/list/`+mes);
+    }
 }

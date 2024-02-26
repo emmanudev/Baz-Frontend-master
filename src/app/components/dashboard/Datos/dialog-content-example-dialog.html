@@ -1,0 +1,51 @@
+<h2 mat-dialog-title>Editar ó Eliminar Datos del Delito</h2>
+<form class="example-form" [formGroup]="formDatos" (ngSubmit)="modificar()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Naucalpan de Juárez</mat-label>
+    <input matInput disabled value="C4">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>ZONA</mat-label>
+      <input matInput formControlName="ZONA">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>COLONIA</mat-label>
+      <input matInput formControlName="COLONIA">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>CALLE_1</mat-label>
+      <input matInput formControlName="CALLE_1">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>CALLE_O_REFERENCIA</mat-label>
+      <input matInput formControlName="CALLE_O_REFERENCIA">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="2"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>MOTIVO_DE_LA_DETENCION</mat-label>
+      <input matInput formControlName="MOTIVO_DE_LA_DETENCION">
+    </mat-form-field></td></tr>
+    <tr><td><mat-form-field class="example-full-width">
+      <mat-label>COORDENADA_Y_LATITUD</mat-label>
+      <input matInput formControlName="COORDENADA_Y_LATITUD">
+    </mat-form-field></td>
+  </tr><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>COORDENADA_X_LONGITUD</mat-label>
+      <input matInput formControlName="COORDENADA_X_LONGITUD">
+    </mat-form-field></td>
+  </tr>
+ </table>
+  <mat-dialog-actions>
+    <button mat-button (click)="eliminar(data.id_DATOS)" mat-dialog-close>Eliminar</button>
+    <button type="submit" mat-button mat-dialog-close>Modificar</button>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</form>

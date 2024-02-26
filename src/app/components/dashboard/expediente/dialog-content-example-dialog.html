@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Editar ó Eliminar Expediente</h2>
+<form class="example-form" [formGroup]="formExpediente" (ngSubmit)="modificar()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Naucalpan de Juárez</mat-label>
+    <input matInput disabled value="C4">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Numero_de_Folio</mat-label>
+      <input matInput formControlName="Numero_de_Folio" value="{{data.Numero_de_Folio}}">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Nombre_del_Primer_Respondiente</mat-label>
+      <input matInput formControlName="Nombre_del_Primer_Respondiente" value="{{data.Nombre_del_Primer_Respondiente}}">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Folio_Plataforma</mat-label>
+      <input matInput formControlName="Folio_Plataforma" value="{{data.Folio_Plataforma}}">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Folio_RND</mat-label>
+      <input matInput formControlName="Folio_RND" value="{{data.Folio_RND}}">
+    </mat-form-field></td>
+  </tr><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Turno</mat-label>
+      <input matInput placeholder="Turno" formControlName="folio" value="{{data.Turno}}">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Entrega_de_Remitidos</mat-label>
+      <input matInput placeholder="Entrega_de_Remitidos" formControlName="Entrega_de_Remitidos" value="{{data.Entrega_de_Remitidos}}">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Total_de_Remitidos</mat-label>
+      <input matInput placeholder="Total_de_Remitidos" formControlName="Total_de_Remitidos" value="{{data.Total_de_Remitidos}}">
+    </mat-form-field></td></tr>
+    <tr>
+  </tr></table>
+  <mat-dialog-actions>
+    <button mat-button (click)="eliminar(data.id)" mat-dialog-close>Eliminar</button>
+    <button type="submit" mat-button mat-dialog-close>Modificar</button>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</form>
+

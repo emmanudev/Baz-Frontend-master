@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Editar ó Eliminar Delito</h2>
+<form class="example-form" [formGroup]="formDelito" (ngSubmit)="modificar()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Naucalpan de Juárez</mat-label>
+    <input matInput disabled value="C4">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Tipo_Delito</mat-label>
+      <input matInput formControlName="Tipo_Delito">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Subtipo</mat-label>
+      <input matInput formControlName="Subtipo">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Modalidad</mat-label>
+      <input matInput formControlName="Modalidad">
+    </mat-form-field></td>
+  </tr></table>
+
+  <mat-dialog-actions>
+    <button mat-button (click)="eliminar(data.Id_delito)" mat-dialog-close>Eliminar</button>
+    <button type="submit" mat-button mat-dialog-close>Modificar</button>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</form>

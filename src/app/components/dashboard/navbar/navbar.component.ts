@@ -9,8 +9,8 @@ import { Menu } from '../../interfaces/menu';
 })
 export class NavbarComponent implements OnInit {
   menu : Menu[] = [];
-  
-  
+
+
   constructor(private _menuService : MenuService) { }
 
   ngOnInit(): void {

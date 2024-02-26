@@ -1,124 +1,152 @@
 <div class="container">
   <mat-list>
-    <mat-list-item class="mat-list-item left">Expedientes</mat-list-item>
+    <mat-list-item class="mat-list-item left">Expediente </mat-list-item>
     <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+
+      <mat-expansion-panel (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" hideToggle>
         <mat-expansion-panel-header>
           <mat-panel-title>
             Crear
           </mat-panel-title>
           <mat-panel-description>
-            Da clic para
-            {{panelOpenState ? 'Cerrar' : 'Abrir'}}
+            Da clic para {{panelOpenState1 ? 'Cerrar' : 'Abrir'}}
           </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-toolbar color="primary">
-          <h2>Ingrese Datos Del Sistema</h2>
-        </mat-toolbar>
+        <div class="example-container">
+          <form class="example-form" [formGroup]="formExpediente" (ngSubmit)="guardar()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Naucalpan de Juárez</mat-label>
+              <input matInput disabled value="C4">
+            </mat-form-field>
 
-        <form [formGroup]="formExpediente" (ngSubmit)="createExp()" enctype="multipart/form-data">
-          <mat-form-field>
-            <ngx-mat-file-input placeholder="Seleccione Archivo" formControlName="file">
-               <mat-icon ngxMatFileInputIcon>upload</mat-icon>
-            </ngx-mat-file-input>
-         </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Fuente</mat-label>
-            <input matInput="matInput" type='text' formControlName="fuente">
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Nic</mat-label>
-            <input matInput="matInput" type='text' formControlName="nic">
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Nuc</mat-label>
-            <input matInput="matInput" type='text' formControlName="nuc">
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Numero de Folio</mat-label>
-            <input matInput="matInput" type='text' formControlName="no_folio">
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Referencia</mat-label>
-            <input matInput="matInput" type='text' formControlName="referencia">
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Folio RND</mat-label>
-            <input matInput="matInput" type='text' formControlName="folio">
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Seleccione la fecha deseada</mat-label>
-            <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="fechacap">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <button type="submit" class="ancho" mat-raised-button="mat-raised-button" color="primary">Enviar</button>
-        </form>
-      </mat-expansion-panel>
-    </mat-accordion>
-    <mat-divider></mat-divider>
-    <mat-accordion>
-      <mat-expansion-panel (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Crear
-          </mat-panel-title>
-          <mat-panel-description>
-            Da clic para
-            {{panelOpenState2 ? 'Cerrar' : 'Abrir'}}
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <mat-toolbar color="primary">
-          <h2>Ingrese Datos Del Sistema</h2>
-        </mat-toolbar>
-        <div class="row container">
-          <form [formGroup]="formExpediente" (ngSubmit)="createExp()">
-            <div class="col-xs-12 col-sm-4 text-center justify-content">
-              <mat-form-field appearance="fill">
-                <mat-label>Fuente</mat-label>
-                <input matInput="matInput" type='text' formControlName="fuente">
-              </mat-form-field>
-              <mat-form-field appearance="fill">
-                <mat-label>Nic</mat-label>
-                <input matInput="matInput" type='text' formControlName="nic">
-              </mat-form-field>
-              <mat-form-field appearance="fill">
-                <mat-label>Nuc</mat-label>
-                <input matInput="matInput" type='text' formControlName="nuc">
-              </mat-form-field>
-            </div>
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Numero_de_Folio</mat-label>
+                <input matInput formControlName="Numero_de_Folio">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Nombre_del_Primer_Respondiente</mat-label>
+                <input matInput formControlName="Nombre_del_Primer_Respondiente">
+              </mat-form-field></td>
+            </tr></table>
 
-            <div class="col-xs-6 col-sm-4 text-center">
-              <mat-form-field appearance="fill">
-                <mat-label>Numero de Folio</mat-label>
-                <input matInput="matInput" type='text' formControlName="no_folio">
-              </mat-form-field>
-              <mat-form-field appearance="fill">
-                <mat-label>Referencia</mat-label>
-                <input matInput="matInput" type='text' formControlName="referencia">
-              </mat-form-field>
-              <mat-form-field appearance="fill">
-                <mat-label>Folio RND</mat-label>
-                <input matInput="matInput" type='text' formControlName="folio">
-              </mat-form-field>
-            </div>
-
-            <div class="col-xs-6 col-sm-4 text-center">
-              <mat-form-field>
-                <mat-label>Seleccione la fecha deseada</mat-label>
-                <input matInput [matDatepicker]="picker2" format="mm/dd/yyyy" formControlName="fechacap">
-                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2></mat-datepicker>
-              </mat-form-field>
-              <button type="submit" class="ancho" mat-raised-button="mat-raised-button" color="primary">Enviar</button>
-
-            </div>
+            <table class="example-full-width" cellspacing="0"><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Folio_Plataforma</mat-label>
+                <input matInput formControlName="Folio_Plataforma">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Folio_RND</mat-label>
+                <input matInput formControlName="Folio_RND">
+              </mat-form-field></td>
+            </tr><tr>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Turno</mat-label>
+                <input matInput placeholder="Turno" formControlName="Turno">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Entrega_de_Remitidos</mat-label>
+                <input matInput placeholder="Entrega_de_Remitidos" formControlName="Entrega_de_Remitidos">
+              </mat-form-field></td>
+              <td><mat-form-field class="example-full-width">
+                <mat-label>Total_de_Remitidos</mat-label>
+                <input matInput placeholder="Total_de_Remitidos" formControlName="Total_de_Remitidos">
+              </mat-form-field></td></tr>
+            </table>
+            <button type="submit" class="ancho" mat-raised-button color="primary" [disabled]="formExpediente.invalid" >Enviar</button>
           </form>
-
         </div>
 
-
+        <mat-spinner *ngIf="spinner"></mat-spinner>
       </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState2 = true" (closed)="panelOpenState3 = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Buscar
+          </mat-panel-title>
+          <mat-panel-description>
+            Da clic para {{panelOpenState3 ? 'Cerrar' : 'Abrir'}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-form-field appearance="fill">
+          <mat-label>Buscar</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Intruducir busqueda" #input>
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort>
+
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+              <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+            </ng-container>
+
+            <!-- fuente Column -->
+            <ng-container matColumnDef="Numero_de_Folio">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero_de_Folio </th>
+              <td mat-cell *matCellDef="let row"> {{row.Numero_de_Folio}} </td>
+            </ng-container>
+
+            <!-- Name Column  ? 'Correcto' : 'No creado' -->
+            <ng-container matColumnDef="Nombre_del_Primer_Respondiente">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre_del_Primer_Respondiente </th>
+              <td mat-cell *matCellDef="let row"> {{row.Nombre_del_Primer_Respondiente}} </td>
+            </ng-container>
+
+            <!-- Fruit Column | date:'YYYY/MM/dd HH:mm:ss aaaa'-->
+            <ng-container matColumnDef="Folio_Plataforma">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Folio_Plataforma </th>
+              <td mat-cell *matCellDef="let row"> {{row.Folio_Plataforma}} </td>
+            </ng-container>
+
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="Folio_RND">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Folio_RND </th>
+              <td mat-cell *matCellDef="let row"> {{row.Folio_RND}} </td>
+            </ng-container>
+
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="Turno">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Turno </th>
+              <td mat-cell *matCellDef="let row"> {{row.Turno}} </td>
+            </ng-container>
+
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="Entrega_de_Remitidos">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Entrega_de_Remitidos </th>
+              <td mat-cell *matCellDef="let row"> {{row.Entrega_de_Remitidos}} </td>
+            </ng-container>
+
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="Total_de_Remitidos">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Total_de_Remitidos</th>
+              <td mat-cell *matCellDef="let row"> {{row.Total_de_Remitidos}}</td>
+            </ng-container>
+
+            <!-- Fruit Column -->
+            <ng-container matColumnDef="action">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Acción </th>
+              <td mat-cell *matCellDef="let row">
+                <button mat-raised-button color="primary" (click)="modificar(row.id);" >Editar o Eliminar</button>
+             </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">No hay coincidencias con la busqueda : "{{input.value}}"</td>
+            </tr>
+          </table>
+
+          <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+        <mat-spinner *ngIf="spinner"></mat-spinner>
+      </mat-expansion-panel>
+
     </mat-accordion>
     <mat-divider></mat-divider>
   </mat-list>

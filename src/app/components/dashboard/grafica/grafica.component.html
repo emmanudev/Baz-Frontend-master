@@ -1,17 +1,18 @@
-<p>grafica works!</p>
-
-<div class="container">
-  <div id="chart">
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [dataLabels]="chartOptions.dataLabels"
-      [plotOptions]="chartOptions.plotOptions"
-      [yaxis]="chartOptions.yaxis"
-      [xaxis]="chartOptions.xaxis"
-      [fill]="chartOptions.fill"
-      [title]="chartOptions.title"
-    ></apx-chart>
-  </div>
-</div>
-
+<mat-list>
+  <mat-list-item class="mat-list-item left">Expediente </mat-list-item>
+  <form [formGroup]="formGraf" (ngSubmit)="filtrarGRaf()">
+    <mat-form-field>
+      <mat-label>Seleccione la fecha del la creación</mat-label>
+      <input matInput [matDatepicker]="picker" format="mm/dd/yyyy" formControlName="inicio">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> <br>
+    <button type="submit" class="ancho" mat-raised-button color="primary" [disabled]="formGraf.invalid">Enviar</button>
+  </form>
+  <mat-list-item>
+    
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [dataLabels]="chartOptions.dataLabels"
+      [plotOptions]="chartOptions.plotOptions" [yaxis]="chartOptions.yaxis" [xaxis]="chartOptions.xaxis"
+      [fill]="chartOptions.fill" [title]="chartOptions.title"></apx-chart>
+  </mat-list-item>
+</mat-list>

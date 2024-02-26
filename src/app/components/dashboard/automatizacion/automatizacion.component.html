@@ -13,7 +13,7 @@
                     </mat-panel-description>
                 </mat-expansion-panel-header>
 
-                <form [formGroup]="FormUploadFile" (ngSubmit)="createLimits()">
+                <form [formGroup]="FormUploadFile">
                     <mat-form-field>
                         <ngx-mat-file-input placeholder="Seleccione Archivo" formControlName="file">
                            <mat-icon ngxMatFileInputIcon>upload</mat-icon>

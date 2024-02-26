@@ -3,7 +3,7 @@
         <mat-spinner *ngIf="login" diameter='50' class="spinner"></mat-spinner>
         <form *ngIf="!login" [formGroup]="form" (ngSubmit)="ingresar()">
             <img src="./assets/img/user.png" width="50%">
-            <h1>Core Bancario Crédito</h1>
+            <h1>IPH C4</h1>
             <mat-form-field class="ancho" appearance="fill">
                 <mat-label>Usuario</mat-label>
                 <input matInput autocomplete="off" formControlName="usuario">
@@ -13,7 +13,7 @@
                 <input type="password" matInput autocomplete="off" formControlName="password">
               </mat-form-field>
               <br>
-              <button type="submit" class="ancho" mat-raised-button color="primary" [disabled]="form.invalid" >Enviar</button>   
-        </form>   
+              <button type="submit" class="ancho" mat-raised-button color="primary" [disabled]="form.invalid" >Enviar</button>
+        </form>
     </div>
 </div>

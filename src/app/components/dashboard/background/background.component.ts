@@ -8,16 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class BackgroundComponent implements OnInit {
 
   images = [
-    { path: 'C:/Users/pablo/Documents/Angular/Baz-Frontend-master/src/assets/img/grupo_salinas_logo.jpg'},
-    { path: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Banco_Azteca.JPG'},
-    { path: 'https://usoarquitectura.com.mx/Assets/WeDoContent/Slider/15_e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb.jpg'},
-    { path: 'https://cdn-3.expansion.mx/75/fa/2c5aea264a449a2dba47e1444219/xpa-web-bancos-bancoazteca-ja-037.jpg'},
-    { path: 'https://cdn.forbes.com.mx/2017/10/Banco-Azteca.jpg'},
-    { path: 'https://pbs.twimg.com/media/EqCQDj5WMAMHamn?format=jpg&name=large'},
-    { path: 'https://pbs.twimg.com/media/EMQ8R4OWkAAG48T.jpg'},
-    { path: 'https://s3.amazonaws.com/businessinsider.mx/wp-content/uploads/2020/11/26144240/peru%CC%81-banco-azteca.jpg'},
-    { path: 'http://www.ricardosalinas.com/blog/images/fotoblognov18.png'},
-    { path: 'https://i1.wp.com/pilotzinoticias.com/wp-content/uploads/2018/03/Elektra.jpg?fit=1200%2C661&ssl=1'},
+    { path: 'https://r3.whistleout.com.mx/public/images/articles/2017/06/naucalpan.jpg'},
+    { path: 'https://mxcity.mx/wp-content/uploads/2020/06/naucalpan-1-e1591261804613.jpg'},
+    { path: 'https://cdn-3.expansion.mx/dims4/default/ca01057/2147483647/strip/true/crop/6165x4110+0+0/resize/1200x800!/format/webp/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F34%2F37%2Fbfd24e6e44e5ab109d02061cc240%2Fistock-1190725276.jpg'},
+    { path: 'https://lh5.googleusercontent.com/p/AF1QipMdoEnlevCENe_vS-6nax9XjxlEQAnchQISTJr7=w548-h318-n-k-no'},
+    { path: 'https://monitorfinanciero.com.mx/wp-content/uploads/2022/12/Palacio-Naucalpan.jpg'},
+    { path: 'https://lh5.googleusercontent.com/p/AF1QipN-CkbbTv9D9QFiRC4Q7bM0t2VTngGTXPXjzp-T=w548-h318-n-k-no'},
+    { path: 'https://s3.amazonaws.com/rytvmx/wpmedia/2020/11/16171028/WhatsApp-Image-2020-11-16-at-16.52.21-822x463.jpeg'},
+
   ];
 
   constructor() { }

@@ -1,29 +1,38 @@
 export class Expediente {
-  Id_exp?: any;
-  fuente: string;
-  nic: string;
-  nuc: string;
-  no_folio: string;
-  referencia: string;
-  folio: string;
-  fechacap: string;
-  file: File;
+  id?: any
+  Numero_de_Folio:string;
+  Nombre_del_Primer_Respondiente: string;
+  Folio_Plataforma: string;
+  Folio_RND: string;
+  Turno: string;
+  Entrega_de_Remitidos: string;
+  Total_de_Remitidos: string;
 
-  constructor(Id_exp: any | null, fuente: string, nic: string, nuc: string, no_folio: string,
-    referencia: string, folio: string, fechacap: string, file: File) {
-    this.Id_exp = Id_exp;
-    this.fuente = fuente;
-    this.nic = nic;
-    this.nuc = nuc;
-    this.no_folio = no_folio;
-    this.referencia = referencia;
-    this.folio = folio;
-    this.fechacap = fechacap;
-    this.file = file;
+
+  constructor(id: any | null, Numero_de_Folio: string,Nombre_del_Primer_Respondiente: string, Folio_Plataforma: string, Folio_RND: string,
+    Turno: string, Entrega_de_Remitidos: string,  Total_de_Remitidos: string) {
+    this.id = id;
+    this.Numero_de_Folio=Numero_de_Folio;
+    this.Nombre_del_Primer_Respondiente = Nombre_del_Primer_Respondiente;
+    this.Folio_Plataforma = Folio_Plataforma;
+    this.Folio_RND = Folio_RND;
+    this.Turno = Turno;
+    this.Entrega_de_Remitidos = Entrega_de_Remitidos;
+    this.Total_de_Remitidos = Total_de_Remitidos;
+
   }
 }
 
-
+export interface ExpedienteI {
+  id? : any;
+  Numero_de_Folio:string;
+  Nombre_del_Primer_Respondiente: string;
+  Folio_Plataforma: string;
+  Folio_RND: string;
+  Turno: string;
+  Entrega_de_Remitidos: string;
+  Total_de_Remitidos: string;
+}
 
 
 

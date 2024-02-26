@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Editar ó Eliminar Datos del Delito</h2>
+<form class="example-form" [formGroup]="formOficial" (ngSubmit)="modificar()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Naucalpan de Juárez</mat-label>
+    <input matInput disabled value="C4">
+  </mat-form-field>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Nombre del Oficial</mat-label>
+      <input matInput formControlName="NOMBRE_OFICIAL">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Dependencia</mat-label>
+      <input matInput formControlName="DEPENDENCIA">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>institucion</mat-label>
+      <input matInput formControlName="INSTITUCION">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="2"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Detenido</mat-label>
+      <input matInput formControlName="DETENIDO">
+    </mat-form-field></td>
+  </tr><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Hechos</mat-label>
+      <input matInput formControlName="HECHOS">
+    </mat-form-field></td>
+
+  </tr></table>
+  <mat-dialog-actions>
+    <button mat-button (click)="eliminar(data.OFICIAL)" mat-dialog-close>Eliminar</button>
+    <button type="submit" mat-button mat-dialog-close>Modificar</button>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</form>

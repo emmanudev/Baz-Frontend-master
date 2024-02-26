@@ -1,0 +1,68 @@
+<h2 mat-dialog-title>Editar ó Eliminar Datos del Delito</h2>
+<form class="example-form" [formGroup]="formDetenidos" (ngSubmit)="modificar()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Naucalpan de Juárez</mat-label>
+    <input matInput disabled value="C4">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>NOMBRE</mat-label>
+      <input matInput formControlName="NOMBRE">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>APELLIDO_PATERNO</mat-label>
+      <input matInput formControlName="APELLIDO_PATERNO">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>APELLIDO_MATERNO</mat-label>
+      <input matInput formControlName="APELLIDO_MATERNO">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>EDAD</mat-label>
+      <input matInput formControlName="EDAD">
+    </mat-form-field></td>
+  </tr></table>
+
+  <table class="example-full-width" cellspacing="2"><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>ORIGINARIO</mat-label>
+      <input matInput formControlName="ORIGINARIO">
+    </mat-form-field></td></tr>
+    <tr><td><mat-form-field class="example-full-width">
+      <mat-label>FECHA_NACIMIENTO</mat-label>
+      <input matInput formControlName="FECHA_NACIMIENTO">
+    </mat-form-field></td>
+  </tr><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>NOMBRE_DEL_PADRE</mat-label>
+      <input matInput formControlName="NOMBRE_DEL_PADRE">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>NOMBRE_DE_LA_MADRE</mat-label>
+      <input matInput formControlName="NOMBRE_DE_LA_MADRE">
+    </mat-form-field></td>
+  </tr>
+  <tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>DOMICILIO</mat-label>
+      <input matInput formControlName="DOMICILIO">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>IMAGEN</mat-label>
+      <input matInput formControlName="IMAGEN">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>SEXO</mat-label>
+      <input matInput formControlName="SEXO">
+    </mat-form-field></td>
+  </tr></table>
+  <mat-dialog-actions>
+    <button mat-button (click)="eliminar(data.id_REMITIDOS)" mat-dialog-close>Eliminar</button>
+    <button type="submit" mat-button mat-dialog-close>Modificar</button>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
+</form>

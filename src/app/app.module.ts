@@ -12,14 +12,13 @@ import { DashboardModule } from './components/dashboard/dashboard.module';
 //Componentes
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { DetenidosComponent } from './components/dashboard/Detenido/detenidos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,7 @@ import { DetenidosComponent } from './components/dashboard/Detenido/detenidos.co
     BrowserAnimationsModule,
     SharedModule,
     DashboardModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
