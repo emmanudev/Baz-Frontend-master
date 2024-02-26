@@ -106,5 +106,8 @@
       }
     }
   },
-  "defaultProject": "Baz-Frontend"
+  "defaultProject": "Baz-Frontend",
+  "cli": {
+    "analytics": false
+  }
 }

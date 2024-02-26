@@ -20,7 +20,7 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
-    "@types/xlsx": "^0.0.36",
+    "@types/xlsx": "^0.0.35",
     "angular-responsive-carousel": "^2.1.2",
     "ng-mat-carousel": "^0.11.1",
     "rxjs": "~7.4.0",
@@ -28,9 +28,9 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^13.3.10",
+    "@angular-devkit/build-angular": "^17.2.1",
     "@angular-material-components/file-input": "^7.0.1",
-    "@angular/cli": "~13.0.2",
+    "@angular/cli": "^17.2.1",
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
